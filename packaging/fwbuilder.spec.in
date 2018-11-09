@@ -18,8 +18,8 @@ Release:        %{release}%{?dist}
 License:        GPL2
 Vendor:         NetCitadel LLC., http://sourceforge.net/project/showfiles.php?group_id=5314
 Group:          %{guigroup}
-Url:            http://www.fwbuilder.org/
-Source:         http://prdownloads.sourceforge.net/fwbuilder/%{name}-%{version}.tar.gz
+Url:            https://github.com/HenriWahl/fwbuilder
+Source:         https://github.com/HenriWahl/fwbuilder/archive/v%{version}.tar.gz
 Packager:       Vadim Kurland <vadim@fwbuilder.org>
 
 Buildroot:      %{_tmppath}/%{name}-%{version}-root
@@ -28,7 +28,7 @@ BuildRequires: libxml2-devel, libxslt-devel, openssl-devel
 %if "%_vendor" == "suse"
 BuildRequires: qt-devel
 %else
-BuildRequires: qt4-devel
+BuildRequires: qt5-qtbase-devel
 %endif
 
 Obsoletes:     fwbuilder-ipt, fwbuilder-pf, fwbuilder-ipf, fwbuilder-ipfw, fwbuilder-pix, fwbuilder-iosacl, fwbuilder-cisco, libfwbuilder, libfwbuilder-devel
