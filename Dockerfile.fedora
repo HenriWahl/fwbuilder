@@ -1,0 +1,22 @@
+FROM fedora:29
+LABEL maintainer=h.wahl@ifw-dresden.de
+
+RUN dnf upgrade -y
+
+RUN dnf install -y autoconf \
+                   automake \
+                   git \
+                   make \
+                   libtool \
+                   libxml2 \
+                   libxml2-devel \
+                   libxslt \
+                   libxslt-devel \
+                   openssl-devel \
+                   qt5-qtbase-devel \
+                   rpm-build \
+                   vim \
+                   wget \
+                   which
+
+WORKDIR /root
