@@ -3,7 +3,8 @@ LABEL maintainer=h.wahl@ifw-dresden.de
 
 RUN dnf upgrade -y
 
-RUN dnf install -y autoconf \
+RUN dnf install -y antlr3-C++-devel \
+                   autoconf \
                    automake \
                    git \
                    make \
